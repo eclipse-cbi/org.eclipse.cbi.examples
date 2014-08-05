@@ -1,4 +1,5 @@
-= CBI Examples
+CBI Examples
+============
 
 This repo contains example code that is used as an example to using the CBI
 infrastructure at Eclipse. This repo contains an example Eclipse plugin which
@@ -7,7 +8,8 @@ pom.xml file contains an example pom configuration that covers the basic
 fields required to upload the built artifacts to repo.eclipse.org as well as
 sign the code using Eclipse infrastructure.
 
-= Building CBI Examples
+Building CBI Examples
+=====================
 
 Simply run:
 
@@ -20,20 +22,20 @@ passing the 'release' profile:
     mvn clean verify -Prelease
 
 
-= Creating a Hudson job
+Creating a Hudson job
+=====================
 
 The following steps will create a Hudson job that does signing and uses
 the promoted builds plugin to do build promotion to the CBI project's
 downloads area.
 
-== Requirements
+Requirements
+------------
 
 - Promoted Builds plugin
 
-== Steps
-
-
-=== Create a job to do a basic build
+Create a job to do a basic build
+--------------------------------
 
 1. Click **New Job**
 2. Enter a job name
@@ -64,17 +66,20 @@ After the build is successful go back to the job **Configure** screen.
 19. Under **Actions** click **Add action**
 20. Click **Execute Shell** below is an example shell script
 
-    #!/bin/bash
+<pre>
+#!/bin/bash
 
-    if [ -d "$SITE_DIR" ]; then
-      rm -rf $SITE_DIR
-    fi
+if [ -d "$SITE_DIR" ]; then
+  rm -rf $SITE_DIR
+fi
 
-    cp -r $WORKSPACE/org.eclipse.cbi.examples.updatesite/target/repository $SITE_DIR
+cp -r $WORKSPACE/org.eclipse.cbi.examples.updatesite/target/repository $SITE_DIR
+</pre>
 
 21. Click **Save**
 
-=== Promoting a build
+Promoting a build
+-----------------
 
 1. Click **Build Now** for the job if you have not already completed a build
 2. Under **Build history** select the most recent build you want to promote
