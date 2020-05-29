@@ -18,10 +18,8 @@
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Eclipse CBI Example Project</name>
-  <url>http://wiki.eclipse.org/CBI</url>
-  <description>
-      CBI example project to create Eclipse plugins, features, and update site.
-  </description>
+  <url>https://wiki.eclipse.org/CBI</url>
+  <description>CBI example project to create Eclipse plugins, features, and update site.</description>
 
   <licenses>
     <license>
@@ -42,7 +40,7 @@
       <subscribe>https://dev.eclipse.org/mailman/listinfo/cbi-dev</subscribe>
       <unsubscribe>https://dev.eclipse.org/mailman/listinfo/cbi-dev</unsubscribe>
       <post>cbi-dev@eclipse.org</post>
-      <archive>http://dev.eclipse.org/mhonarc/lists/cbi-dev/</archive>
+      <archive>https://dev.eclipse.org/mhonarc/lists/cbi-dev/</archive>
     </mailingList>
   </mailingLists>
 
@@ -53,7 +51,7 @@
 
   <organization>
     <name>Eclipse Foundation</name>
-    <url>http://eclipse.org/</url>
+    <url>https://www.eclipse.org/</url>
   </organization>
 
   <developers>
@@ -62,23 +60,23 @@
       <name>Thanh Ha</name>
       <email>thanh.ha@eclipse.org</email>
       <organization>Eclipse Foundation</organization>
-      <organizationUrl>http://eclipse.org/</organizationUrl>
+      <organizationUrl>https://www.eclipse.org/</organizationUrl>
       <roles>
         <role>Release Engineer</role>
         <role>Developer</role>
       </roles>
       <timezone>America/Montreal</timezone>
       <properties>
-        <picUrl>http://www.eclipse.org/org/foundation/hat%20photos/thanh.jpg</picUrl>
+        <picUrl>https://www.eclipse.org/org/foundation/hat%20photos/thanh.jpg</picUrl>
       </properties>
     </developer>
   </developers>
 
   <scm>
-    <connection>scm:git:git://git.eclipse.org/gitroot/cbi/org.eclipse.cbi.example</connection>
-    <developerConnection>scm:git:ssh://user@git.eclipse.org:29418/cbi/org.eclipse.cbi.example</developerConnection>
+    <connection>scm:git:git://git.eclipse.org/gitroot/cbi/org.eclipse.cbi.examples</connection>
+    <developerConnection>scm:git:ssh://user@git.eclipse.org:29418/cbi/org.eclipse.cbi.examples</developerConnection>
     <tag>master</tag>
-    <url>http://git.eclipse.org/c/cbi/org.eclipse.cbi.example.git/</url>
+    <url>https://git.eclipse.org/c/cbi/org.eclipse.cbi.examples.git/</url>
   </scm>
 
   <properties>
@@ -86,8 +84,8 @@
     <tycho.version>0.21.0</tycho.version>
     <cbi-plugins.version>1.1.1</cbi-plugins.version>
     <eclipse-maven-repo.url>https://repo.eclipse.org/content/repositories/releases/</eclipse-maven-repo.url>
-    <eclipse-license-repo>http://download.eclipse.org/cbi/updates/license</eclipse-license-repo>
-    <eclipse-platform-repo.url>http://download.eclipse.org/eclipse/updates/4.3</eclipse-platform-repo.url>
+    <eclipse-license-repo>https://download.eclipse.org/cbi/updates/license</eclipse-license-repo>
+    <eclipse-platform-repo.url>https://download.eclipse.org/eclipse/updates/4.3</eclipse-platform-repo.url>
 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
