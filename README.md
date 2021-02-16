@@ -1,12 +1,10 @@
 CBI Examples
 ============
 
-This repo contains example code that is used as an example to using the CBI
-infrastructure at Eclipse. This repo contains an example Eclipse plugin which
-is used to create an example feature and example p2 repository. The parent
-pom.xml file contains an example pom configuration that covers the basic
-fields required to upload the built artifacts to repo.eclipse.org as well as
-sign the code using Eclipse infrastructure.
+This repo contains examples to test the CBI infrastructure at Eclipse.
+It contains an Eclipse plugin which is used to create a feature and a p2 repository.
+The parent pom.xml covers the basic configuration required to upload the built artifacts to
+repo.eclipse.org as well as sign the code using Eclipse infrastructure.
 
 Building CBI Examples
 =====================
@@ -16,16 +14,16 @@ Simply run:
     mvn clean verify
 
 
-If building on Hudson / HIPP at Eclipse you can also sign the build by
+If building on the CI at Eclipse you can also sign the build by
 passing the 'release' profile:
 
     mvn clean verify -Prelease
 
 
-Creating a Hudson job
-=====================
+Creating a Jenkins job
+======================
 
-The following steps will create a Hudson job that does signing and uses
+The following steps will create a Jenkins job that does signing and uses
 the promoted builds plugin to do build promotion to the CBI project's
 downloads area.
 
@@ -43,11 +41,9 @@ Create a job to do a basic build
 4. Click **OK**
 5. For JDK, select jdk1.7.0-latest
 6. Under **Source Code Management** select **Git**
-7. Enter the URL for your git repo: git://git.eclipse.org/gitroot/cbi/org.eclipse.cbi.examples.git
-8. Under **Build** click **Add build step**, select **Invoke Maven 3**
-9. Set **Goals** to be **clean verify**
-10. Click **Advanced**
-11. In Profiles enter **release**
+7. Enter the URL for your git repo: https://github.com/eclipse-cbi/eclipse-tycho-examples
+8. Under **Build** click **Add build step**, select **Invoke top-level Maven targets**
+9. Set **Goals** to be **clean verify -Prelease**
 12. Click **Save**
 
 At this point test that the build is able to build successfully by clicking
