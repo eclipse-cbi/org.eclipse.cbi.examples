@@ -80,8 +80,8 @@
   </scm>
 
   <properties>
-    <maven.version>3.2.1</maven.version>
-    <tycho.version>0.21.0</tycho.version>
+    <maven.version>3.6.3</maven.version>
+    <tycho.version>2.0.0</tycho.version>
     <cbi-plugins.version>1.1.1</cbi-plugins.version>
     <eclipse-maven-repo.url>https://repo.eclipse.org/content/repositories/releases/</eclipse-maven-repo.url>
     <eclipse-license-repo>https://download.eclipse.org/cbi/updates/license</eclipse-license-repo>
@@ -91,7 +91,7 @@
   </properties>
 
   <prerequisites>
-    <maven>3.2.1</maven>
+    <maven>3.6.3</maven>
   </prerequisites>
 
   <pluginRepositories>
