@@ -32,18 +32,19 @@ Requirements
 
 - Promoted Builds plugin
 
-Create a job to do a basic build
---------------------------------
+Create a free-style job to do a basic build
+-------------------------------------------
 
 1. Click **New Job**
-2. Enter a job name
+2. Enter a job name, e.g. 'eclipse-cbi-tycho-example-job'
 3. Select **Build a free-style software job**
 4. Click **OK**
-5. For JDK, select jdk1.7.0-latest
+5. For JDK, select `openjdk-jdk11-latest`
 6. Under **Source Code Management** select **Git**
 7. Enter the URL for your git repo: https://github.com/eclipse-cbi/eclipse-cbi-tycho-example
+8. Select branch `main`
 8. Under **Build** click **Add build step**, select **Invoke top-level Maven targets**
-9. Set **Goals** to be **clean verify -Prelease**
+9. Set **Goals** to be `clean verify -Prelease -B`
 12. Click **Save**
 
 At this point test that the build is able to build successfully by clicking
