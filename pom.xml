@@ -13,11 +13,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.eclipse.cbi.examples</groupId>
-  <artifactId>cbi-example-parent</artifactId>
+  <groupId>org.eclipse.cbi.tycho.example</groupId>
+  <artifactId>cbi.tycho.example-parent</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>Eclipse CBI Example Project</name>
+  <name>Eclipse CBI Tycho Example Project</name>
   <url>https://wiki.eclipse.org/CBI</url>
   <description>CBI example project to create Eclipse plugins, features, and update site.</description>
 
@@ -73,10 +73,10 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git://git.eclipse.org/gitroot/cbi/org.eclipse.cbi.examples</connection>
-    <developerConnection>scm:git:ssh://user@git.eclipse.org:29418/cbi/org.eclipse.cbi.examples</developerConnection>
-    <tag>master</tag>
-    <url>https://git.eclipse.org/c/cbi/org.eclipse.cbi.examples.git/</url>
+    <connection>scm:git:git://git@github.com:eclipse-cbi/eclipse-cbi-tycho-example.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com:eclipse-cbi/eclipse-cbi-tycho-example.git</developerConnection>
+    <tag>main</tag>
+    <url>https://github.com/eclipse-cbi/eclipse-cbi-tycho-example</url>
   </scm>
 
   <properties>
@@ -121,9 +121,9 @@
   </repositories>
 
   <modules>
-    <module>org.eclipse.cbi.examples.feature</module>
-    <module>org.eclipse.cbi.examples.plugin</module>
-    <module>org.eclipse.cbi.examples.updatesite</module>
+    <module>org.eclipse.cbi.tycho.example.feature</module>
+    <module>org.eclipse.cbi.tycho.example.plugin</module>
+    <module>org.eclipse.cbi.tycho.example.updatesite</module>
   </modules>
 
   <distributionManagement>

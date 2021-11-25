@@ -1,13 +1,13 @@
-CBI Examples
-============
+CBI Tycho Example
+=================
 
-This repo contains examples to test the CBI infrastructure at Eclipse.
+This repo contains an example to test the CBI infrastructure at Eclipse.
 It contains an Eclipse plugin which is used to create a feature and a p2 repository.
 The parent pom.xml covers the basic configuration required to upload the built artifacts to
 repo.eclipse.org as well as sign the code using Eclipse infrastructure.
 
-Building CBI Examples
-=====================
+Building CBI Tycho Example
+==========================
 
 Simply run:
 
@@ -41,7 +41,7 @@ Create a job to do a basic build
 4. Click **OK**
 5. For JDK, select jdk1.7.0-latest
 6. Under **Source Code Management** select **Git**
-7. Enter the URL for your git repo: https://github.com/eclipse-cbi/eclipse-tycho-examples
+7. Enter the URL for your git repo: https://github.com/eclipse-cbi/eclipse-cbi-tycho-example
 8. Under **Build** click **Add build step**, select **Invoke top-level Maven targets**
 9. Set **Goals** to be **clean verify -Prelease**
 12. Click **Save**
@@ -69,7 +69,7 @@ if [ -d "$SITE_DIR" ]; then
   rm -rf $SITE_DIR
 fi
 
-cp -r $WORKSPACE/org.eclipse.cbi.examples.updatesite/target/repository $SITE_DIR
+cp -r $WORKSPACE/org.eclipse.cbi.tycho.example.updatesite/target/repository $SITE_DIR
 </pre>
 
 21. Click **Save**
@@ -81,3 +81,12 @@ Promoting a build
 2. Under **Build history** select the most recent build you want to promote
 3. Click **Promotion Status**
 4. Verify the parameters and click **Approve**
+
+Example job
+-----------
+
+Freestyle job
+* https://ci.eclipse.org/cbi/job/eclipse-cbi-tycho-example-job/
+
+Pipeline job
+* https://ci.eclipse.org/cbi/job/eclipse-cbi-tycho-example-pipeline-job/
