@@ -1,5 +1,6 @@
 build-job:
   image: maven:3.8.4-openjdk-11-slim
   stage: build
+  timeout: 30 minutes
   script:
-    - echo "Hello, $GITLAB_USER_LOGIN!"
+    - mvn clean verify -B
