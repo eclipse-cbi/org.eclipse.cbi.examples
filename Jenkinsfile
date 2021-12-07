@@ -21,15 +21,15 @@ pipeline {
         stage('Deploy') {
             steps {
                 sshagent(['projects-storage.eclipse.org-bot-ssh']) {
-                    sh '''
+                    sh """
                        echo "Deploying..."
                        #check if dir already exists
                        if ssh ${LOGIN} test -d ${SITE_DIR}; then
-                         ssh ${LOGIN} "rm -rf ${SITE_DIR}"
+                         ssh ${LOGIN} rm -rf ${SITE_DIR}
                        fi
-                       ssh ${login} "mkdir -p ${SITE_DIR}"
+                       ssh ${login} mkdir -p ${SITE_DIR}
                        scp -r org.eclipse.cbi.tycho.example.updatesite/target/repository ${LOGIN}:${SITE_DIR}
-                       '''
+                       """
                 }
             }
         }
