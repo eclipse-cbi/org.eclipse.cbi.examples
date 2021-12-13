@@ -34,14 +34,16 @@ the build artifacts to the CBI project's downloads area.
      *  (Modify to point to some directory in your project's
     downloads area).
 8. Click **Add Parameter > Boolean Parameter**
-   * Name: `DEPLOY`
+    * Name: `DEPLOY`
 9. Under **Source Code Management** select **Git**
-   * Enter the URL for your git repo: e.g. `https://github.com/eclipse-cbi/eclipse-cbi-tycho-example`
-   * Select branch `main`
-10. Under **Build** click **Add build step**, select **Invoke top-level Maven targets**
+    * Enter the URL for your git repo: e.g. `https://github.com/eclipse-cbi/eclipse-cbi-tycho-example`
+    * Select branch `main`
+10. Under **Build Environment** select **SSH Agent**
+    * From the drop-down menu select `ssh://<bot-username>@projects-storage.eclipse.org`
+11. Under **Build** click **Add build step**, select **Invoke top-level Maven targets**
     * Set **Goals** to be `clean verify -Prelease -B`
-11. Click **Add build step** again, select **Execute Shell**
-12. Below is an example shell script:
+12. Click **Add build step** again, select **Execute Shell**
+13. Below is an example shell script:
 
 <pre>
 #!/bin/bash
@@ -61,7 +63,7 @@ fi
 
 &lt;bot-username&gt; is "genie.&lt;shortname&gt;". E.g. for Eclipse CBI it's "genie.cbi".
 
-13. Click **Save**
+14. Click **Save**
 
 At this point test that the build is able to build successfully by clicking
 **Build Now with**
