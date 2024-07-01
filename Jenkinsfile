@@ -33,5 +33,10 @@ pipeline {
                 }
             }
         }
+        stage('ossrh') {
+            steps {
+                sh 'mvn deploy -Possrh -B'
+            }
+        }
     }
 }
