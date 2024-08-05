@@ -26,7 +26,7 @@ the build artifacts to the CBI project's downloads area.
 2. Enter a job name, e.g. 'eclipse-cbi-tycho-example-job'
 3. Select **Build a free-style software job**
 4. Click **OK**
-5. For JDK, select `openjdk-jdk11-latest`
+5. For JDK, select `openjdk-jdk17-latest`
 6. Select **This project is parameterized**
 7. Click **Add Parameter > String Parameter**
    * Name: `SITE_DIR` 

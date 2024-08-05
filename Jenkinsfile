@@ -5,8 +5,8 @@ pipeline {
         timeout(time: 10, unit: 'MINUTES')
     }
     tools {
-        maven 'apache-maven-3.8.2'
-        jdk 'adoptopenjdk-hotspot-jdk11-latest'
+        maven 'apache-maven-3.9.6'
+        jdk 'openjdk-jdk17-latest'
     }
     environment {
         LOGIN = 'genie.cbi@projects-storage.eclipse.org'
