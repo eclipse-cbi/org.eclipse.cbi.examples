@@ -45,8 +45,8 @@
   </mailingLists>
 
   <issueManagement>
-    <system>Bugzilla</system>
-    <url>https://bugs.eclipse.org/bugs/enter_bug.cgi?product=CBI</url>
+    <system>GitHub issues</system>
+    <url>https://github.com/eclipse-cbi/eclipse-cbi-tycho-example/issues</url>
   </issueManagement>
 
   <organization>
@@ -89,10 +89,6 @@
 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-
-  <prerequisites>
-    <maven>3.9.6</maven>
-  </prerequisites>
 
   <pluginRepositories>
     <pluginRepository>
@@ -146,6 +142,26 @@
         <artifactId>tycho-maven-plugin</artifactId>
         <version>${tycho.version}</version>
         <extensions>true</extensions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>3.5.0</version>
+        <executions>
+          <execution>
+            <id>enforce-maven</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireMavenVersion>
+                  <version>3.9.6</version>
+                </requireMavenVersion>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
 
